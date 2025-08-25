@@ -3,48 +3,196 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Computational Biology Hub</title>
+    <title>Inayat Ullah Irshad - Computational Biologist</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
             font-family: 'Inter', sans-serif;
+            background-color: #fcfaf7; /* A very light, warm off-white */
+            color: #3d405b; /* A dark, muted blue-gray for text */
+        }
+        .section-title {
+            font-size: 2.25rem; /* 36px */
+            font-weight: 700;
+            margin-bottom: 2.5rem; /* 40px */
+            text-align: center;
+            color: #3d405b;
+        }
+        .nav-link {
+            position: relative;
+            color: #3d405b;
+            transition: color 0.3s;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #3d5a80; /* A professional blue for accents */
+            transition: width 0.3s;
+        }
+        .nav-link:hover {
+            color: #3d5a80;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .publication-card, .tool-card {
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .publication-card:hover, .tool-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.07), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
         }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body class="antialiased">
 
-    <nav class="bg-white shadow-sm sticky top-0 z-10">
+    <nav class="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-10">
         <div class="container mx-auto px-8 py-4 flex justify-between items-center">
-            <a href="index.html" class="font-bold text-xl text-gray-900">Statistical Tools</a>
-            <div>
-                <a href="index.html" class="px-4 text-blue-600 font-semibold">Home</a>
-                <a href="tools.html" class="px-4 hover:text-blue-600">Interactive Tools</a>
-                <a href="guides.html" class="px-4 hover:text-blue-600">Guides</a>
+            <a href="index.html" class="font-bold text-xl text-gray-900">Inayat Ullah Irshad</a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#research" class="nav-link">Research</a>
+                <a href="#publications" class="nav-link">Publications</a>
+                <a href="#tools" class="nav-link">Tools</a>
             </div>
         </div>
     </nav>
 
-    <main class="container mx-auto p-8 text-center">
-        <header class="py-16">
-            <h1 class="text-5xl font-bold text-gray-900">Welcome to the Statistical Tools Hub</h1>
-            <p class="mt-4 text-xl text-gray-600 max-w-3xl mx-auto">
-                An online resource for exploring the foundational statistical models used in computational biology.
-                Engage with interactive tools and read in-depth guides to deepen your understanding.
-            </p>
-            <div class="mt-8 flex justify-center gap-4">
-                 <a href="tools.html" class="inline-block bg-blue-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors">
-                    Launch Interactive Tools
+    <!-- Hero Section -->
+    <header class="bg-white">
+        <div class="container mx-auto px-8 py-24 text-center">
+            <h1 class="text-5xl md:text-6xl font-bold text-gray-900 leading-tight">Inayat Ullah Irshad</h1>
+            <p class="mt-4 text-xl text-gray-600">PMRF Research Scholar, Indian Institute of Technology Jammu</p>
+            <p class="mt-2 text-lg text-gray-500 max-w-3xl mx-auto">Focusing on Biophysics, Computational Biology, and the quantitative modeling of gene expression regulation.</p>
+        </div>
+    </header>
+
+    <main class="container mx-auto p-8">
+        
+        <!-- About Me Section -->
+        <section id="about" class="py-20">
+            <h2 class="section-title">About Me</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 items-center">
+                <div class="md:col-span-1 flex justify-center">
+                    <img src="https://iitjammu.ac.in/pmrf/assets/img/inayat.jpg" alt="Inayat Ullah Irshad" class="rounded-full mx-auto w-64 h-64 object-cover shadow-xl border-4 border-white">
+                </div>
+                <div class="md:col-span-2 text-lg text-gray-700 space-y-4">
+                    <p>
+                        I am a Prime Minister's Research Fellow (PMRF) at the Indian Institute of Technology Jammu, pursuing a PhD in the Department of Physics. My research lies at the exciting intersection of non-equilibrium statistical physics and molecular biology.
+                    </p>
+                    <p>
+                        I focus on understanding the regulation of gene expression, genomics, and transcriptomics through the lens of physical bioinformatics. My goal is to develop quantitative models that explain complex cellular processes, such as the optimization of cellular resources and protein synthesis under stress conditions.
+                    </p>
+                    <div class="mt-8 flex space-x-6">
+                        <a href="https://scholar.google.com/citations?user=hPcdyDEAAAAJ&hl=en" target="_blank" class="text-gray-400 hover:text-[#3d5a80] transition-colors" aria-label="Google Scholar">
+                            <i class="fas fa-graduation-cap fa-2x"></i>
+                        </a>
+                        <a href="https://loop.frontiersin.org/people/1387739/overview" target="_blank" class="text-gray-400 hover:text-[#3d5a80] transition-colors" aria-label="Frontiers Loop">
+                             <i class="fas fa-link fa-2x"></i>
+                        </a>
+                         <a href="https://www.researchgate.net/scientific-contributions/Inayat-Ullah-Irshad-2256560162" target="_blank" class="text-gray-400 hover:text-[#3d5a80] transition-colors" aria-label="ResearchGate">
+                            <i class="fab fa-researchgate fa-2x"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Research Section -->
+        <section id="research" class="py-20 bg-white rounded-xl shadow-lg">
+             <div class="container mx-auto px-8">
+                <h2 class="section-title">Research Interests</h2>
+                <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 text-lg">
+                    <div class="flex items-start space-x-4">
+                        <i class="fas fa-atom text-2xl text-[#3d5a80] mt-1"></i>
+                        <div>
+                            <h3 class="font-semibold">Non-equilibrium statistical physics</h3>
+                            <p class="text-gray-600">Applying physical principles to understand dynamic biological systems.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <i class="fas fa-dna text-2xl text-[#3d5a80] mt-1"></i>
+                        <div>
+                            <h3 class="font-semibold">Gene expression regulation</h3>
+                            <p class="text-gray-600">Modeling the complex kinetics of transcription and translation.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <i class="fas fa-cogs text-2xl text-[#3d5a80] mt-1"></i>
+                        <div>
+                            <h3 class="font-semibold">Optimization of cellular resources</h3>
+                            <p class="text-gray-600">Investigating how cells efficiently manage protein synthesis.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <i class="fas fa-laptop-code text-2xl text-[#3d5a80] mt-1"></i>
+                        <div>
+                            <h3 class="font-semibold">Physical Bioinformatics</h3>
+                            <p class="text-gray-600">Developing computational frameworks for biological data.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Publications Section -->
+        <section id="publications" class="py-20">
+            <h2 class="section-title">Selected Publications</h2>
+            <div class="max-w-4xl mx-auto space-y-6">
+                <div class="publication-card p-6 bg-white rounded-lg border border-gray-200/80">
+                    <p class="font-semibold text-lg text-[#3d405b]">Understanding the regulation of protein synthesis under stress conditions.</p>
+                    <p class="text-gray-600 mt-1"><strong>Irshad, I. U.</strong>, & Sharma, A. K. (2024). <em>Biophysical Journal, 123(20), 3627-3639.</em></p>
+                    <a href="https://pubmed.ncbi.nlm.nih.gov/39277792/" target="_blank" class="text-[#3d5a80] hover:underline font-semibold mt-2 inline-block">Read Paper &rarr;</a>
+                </div>
+                <div class="publication-card p-6 bg-white rounded-lg border border-gray-200/80">
+                    <p class="font-semibold text-lg text-[#3d405b]">Decoding stoichiometric protein synthesis in E. coli through translation rate parameters.</p>
+                    <p class="text-gray-600 mt-1"><strong>Irshad, I. U.</strong>, & Sharma, A. K. (2023). <em>Biophysical Reports, 3(4).</em></p>
+                    <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=hPcdyDEAAAAJ&citation_for_view=hPcdyDEAAAAJ:u5HHmVD_uO8C" target="_blank" class="text-[#3d5a80] hover:underline font-semibold mt-2 inline-block">Read Paper &rarr;</a>
+                </div>
+                 <div class="publication-card p-6 bg-white rounded-lg border border-gray-200/80">
+                    <p class="font-semibold text-lg text-[#3d405b]">Quantitative modeling of protein synthesis using ribosome profiling data.</p>
+                    <p class="text-gray-600 mt-1">Yadav, V., <strong>Irshad, I. U.</strong>, Kumar, H., & Sharma, A. K. (2021). <em>Frontiers in Molecular Biosciences, 8, 688700.</em></p>
+                    <a href="https://www.frontiersin.org/journals/molecular-biosciences/articles/10.3389/fmolb.2021.688700/full" target="_blank" class="text-[#3d5a80] hover:underline font-semibold mt-2 inline-block">Read Paper &rarr;</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tools Section -->
+        <section id="tools" class="py-20">
+            <h2 class="section-title">Tools & Resources</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <a href="tools.html" class="tool-card block bg-white rounded-lg border border-gray-200/80 overflow-hidden">
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-2 text-[#3d405b]">Interactive Distributions Explorer</h3>
+                        <p class="text-gray-700 mb-4">
+                            A web-based tool to visualize and interact with the key discrete probability distributions used in computational biology.
+                        </p>
+                        <span class="font-bold text-[#3d5a80]">Launch Tool &rarr;</span>
+                    </div>
                 </a>
-                <a href="guides.html" class="inline-block bg-gray-200 text-gray-800 font-bold py-3 px-6 rounded-lg hover:bg-gray-300 transition-colors">
-                    Read the Guides
+                <a href="https://ajeetsharmalab.com/tir-predictor-and-optimization/" target="_blank" class="tool-card block bg-white rounded-lg border border-gray-200/80 overflow-hidden">
+                     <div class="p-6">
+                        <h3 class="font-bold text-xl mb-2 text-[#3d405b]">TIR Predictor and Optimizer</h3>
+                        <p class="text-gray-700 mb-4">
+                           Web-tools for accurate prediction of translation initiation rate and precision gene design in Saccharomyces cerevisiae.
+                        </p>
+                        <span class="font-bold text-[#3d5a80]">Learn More &rarr;</span>
+                    </div>
                 </a>
             </div>
-        </header>
+        </section>
+
     </main>
 
-    <footer class="text-center py-8 mt-12 border-t">
-        <p class="text-sm text-gray-500">Statistical Tools for Modern Biology</p>
+    <footer class="text-center py-10 mt-12 border-t bg-white">
+        <p class="text-sm text-gray-600">&copy; 2024 Inayat Ullah Irshad. All Rights Reserved.</p>
     </footer>
 
 </body>
