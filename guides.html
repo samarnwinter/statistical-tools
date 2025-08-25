@@ -1,26 +1,68 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2299.6">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; -webkit-text-stroke: #000000}
-    span.s1 {font-kerning: none}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guides - Computational Biology Hub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
 </head>
-<body>
-<p class="p1"><span class="s1">&lt;nav class="bg-white shadow-sm"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="container mx-auto px-8 py-4 flex justify-between items-center"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;a href="/index.html" class="font-bold text-xl"&gt;My Website&lt;/a&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;a href="/index.html" class="px-4 hover:text-blue-600"&gt;Home&lt;/a&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;a href="/tools.html" class="px-4 hover:text-blue-600"&gt;Interactive Tools&lt;/a&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;a href="/guides.html" class="px-4 hover:text-blue-600"&gt;Guides&lt;/a&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1">&lt;/nav&gt;</span></p>
+<body class="bg-gray-50 text-gray-800">
+
+    <nav class="bg-white shadow-sm sticky top-0 z-10">
+        <div class="container mx-auto px-8 py-4 flex justify-between items-center">
+            <a href="index.html" class="font-bold text-xl text-gray-900">Statistical Tools</a>
+            <div>
+                <a href="index.html" class="px-4 hover:text-blue-600">Home</a>
+                <a href="tools.html" class="px-4 hover:text-blue-600">Interactive Tools</a>
+                <a href="guides.html" class="px-4 text-blue-600 font-semibold">Guides</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container mx-auto p-8">
+        <header class="mb-10">
+            <h1 class="text-4xl font-bold text-gray-900">A Researcher's Guide to Discrete Distributions</h1>
+            <p class="mt-4 text-lg text-gray-600">
+                This section provides in-depth explanations of the key discrete probability distributions used in computational biology. Each guide covers the mathematical foundations, visualizations, and critical applications in modern biological research.
+            </p>
+        </header>
+
+        <section>
+            <h2 class="text-2xl font-bold border-b pb-3 mb-6">Foundational Distributions</h2>
+            <div class="space-y-4">
+                <a href="bernoulli-guide.html" class="block p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                    <h3 class="font-semibold text-lg text-blue-700">The Bernoulli Distribution</h3>
+                    <p class="text-gray-600 mt-1">Modeling a single binary event, like the state of a SNP.</p>
+                </a>
+                <a href="binomial-guide.html" class="block p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                    <h3 class="font-semibold text-lg text-blue-700">The Binomial Distribution</h3>
+                    <p class="text-gray-600 mt-1">Aggregating multiple Bernoulli trials to count successes.</p>
+                </a>
+            </div>
+
+            <h2 class="text-2xl font-bold border-b pb-3 mb-6 mt-12">Distributions for Count Data</h2>
+            <div class="space-y-4">
+                <a href="poisson-guide.html" class="block p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                    <h3 class="font-semibold text-lg text-blue-700">The Poisson Distribution</h3>
+                    <p class="text-gray-600 mt-1">Modeling rates of rare events, like mutations or read counts.</p>
+                </a>
+                <a href="negative-binomial-guide.html" class="block p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                    <h3 class="font-semibold text-lg text-blue-700">The Negative Binomial Distribution</h3>
+                    <p class="text-gray-600 mt-1">The standard for overdispersed biological data like in RNA-seq.</p>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="text-center py-8 mt-12 border-t">
+        <p class="text-sm text-gray-500">Statistical Tools for Modern Biology</p>
+    </footer>
+
 </body>
 </html>
